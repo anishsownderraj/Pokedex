@@ -1,0 +1,23 @@
+@use 'styles/_nav_bar';
+@use 'styles/pokemon_card';
+@use 'styles/header';
+@use 'styles/pokemon_list';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .app-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
