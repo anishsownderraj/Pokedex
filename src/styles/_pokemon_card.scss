@@ -1,0 +1,140 @@
+@use "sass:map";
+
+$type-background: (
+    "grass":(bg-color:#a7db8d, br-color: #78c850),
+    "fire":(bg-color: #f5ac78, br-color: #f08030),
+    "water":(bg-color: #9db7f5, br-color: #6890f0),
+    "electric":(bg-color: #fae078, br-color: #f8d030),
+    "bug":(bg-color: #c6d16e, br-color: #a8b820),
+    "dragon":(bg-color: #a27dfa, br-color: #7038f8),
+    "fairy":(bg-color: #f4bdc9, br-color: #ee99ac),
+    "ghost":(bg-color: #a292bc, br-color: #705898),
+    "ground":(bg-color: #ebd69d, br-color: #e0c068),
+    "ice":(bg-color: #bce6e6, br-color: #98d8d8),
+    "normal":(bg-color: #c6c6a7, br-color: #a8a878),
+    "poison":(bg-color: #c183c1, br-color: #a8a878),
+    "psychic":(bg-color: #fa92b2, br-color: #f85888),
+    "rock":(bg-color: #d1c17d, br-color: #b8a038),
+    "steel":(bg-color: #d1d1e0, br-color: #b8b8d0),
+    "fighting":(bg-color: #d67873, br-color: #c03028),
+    "flying":(bg-color: #a890f0, br-color: #a890f0),
+    "dark":(bg-color: #705848, br-color: #3a2d26),
+);
+
+.pokemon-card-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    min-height: 350px;
+    height: 250px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.23) 1px 7px 8px;
+    border: 3px solid transparent;
+
+    &:hover {
+        @each $type, $color in $type-background {
+            &.#{$type} {
+                border: 3px solid map.get($color, "br-color");
+            }
+
+        }
+    }
+
+    @each $type, $color in $type-background {
+        &.#{$type} {
+            background-color: map.get($color, "bg-color");
+        }
+
+    }
+
+    .pokemon-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 80%;
+        padding: 10px 10px;
+        margin: auto;
+        gap: 25px;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+
+        .name {
+            font-family: Lato, sans-serif;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            color: white;
+
+        }
+
+        .number {
+            display: flex;
+            background-color: rgba(255, 255, 255, .25);
+            border: .2px solid white;
+            border-radius: 25px;
+            padding: 7px 15px;
+            color: white;
+            font-size: 0.8rem;
+            box-shadow: rgba(0, 0, 0, 0.10) 1px 7px 8px;
+        }
+
+    }
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .bg-circle {
+            position: absolute;
+            background-color: rgba(255, 255, 255, .25);
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            z-index: 2;
+        }
+
+        .pokemon-image {
+            width: 150px;
+            z-index: 3;
+        }
+    }
+
+    .types-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+
+        .type-elements {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            width: 100%;
+
+            @each $type, $color in $type-background {
+                .types-#{$type} {
+                    background-color: map.get($color, "br-color");
+                    padding: 3px 12px;
+                    border-radius: 25px;
+                    color: white;
+
+                    img {
+                        width: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
