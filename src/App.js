@@ -4,6 +4,7 @@ import React from 'react';
 import NavBar from './components/Navbar';
 import Header from './components/Header';
 import PokemonList from './components/PokemonList';
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <NavBar />
             <Header />
             <PokemonList />
+            <Footer />
         </div>
     );
 };
