@@ -29,39 +29,39 @@ const Navbar = () => {
 
                     <div className='social-links'>
                         <a
-                            href="https://www.instagram.com/_anishs_"
-                            target="_blank"
-                            rel="noreferrer"
+                            href='https://www.instagram.com/_anishs_'
+                            target='_blank'
+                            rel='noreferrer'
                         >
                             <motion.div
                                 animate={{ opacity: 1.2, y: [20, 0] }}
                                 transition={{ delay: 0.25 }}
                             >
-                                <TiSocialInstagramCircular className="nav-icon" size="2em" />
+                                <TiSocialInstagramCircular className='nav-icon' size='2em' />
                             </motion.div>
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/anish-sownderraj"
-                            target="_blank"
-                            rel="noreferrer"
+                            href='https://www.linkedin.com/in/anish-sownderraj'
+                            target='_blank'
+                            rel='noreferrer'
                         >
                             <motion.div
                                 animate={{ opacity: 1.2, y: [20, 0] }}
                                 transition={{ delay: 0.35 }}
                             >
-                                <TiSocialLinkedinCircular className="nav-icon" size="2em" />
+                                <TiSocialLinkedinCircular className='nav-icon' size='2em' />
                             </motion.div>
                         </a>
                         <a
-                            href="https://github.com/anishsownderraj"
-                            target="_blank"
-                            rel="noreferrer"
+                            href='https://github.com/anishsownderraj'
+                            target='_blank'
+                            rel='noreferrer'
                         >
                             <motion.div
                                 animate={{ opacity: 1.2, y: [20, 0] }}
                                 transition={{ delay: 0.45 }}
                             >
-                                <TiSocialGithubCircular className="nav-icon" size="2em" />
+                                <TiSocialGithubCircular className='nav-icon' size='2em' />
                             </motion.div>
                         </a>
                     </div>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // components
 import PokemonCard from './PokemonCard';
 // icons
-import { CgPokemon } from "react-icons/cg";
+import { CgPokemon } from 'react-icons/cg';
 // api
 import axios from 'axios';
 

@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 
 $card-background: (
     grass: (bg-color:#a7db8d, br-color: #78c850),
@@ -56,15 +56,14 @@ $select-card-background: (
     &:hover {
         @each $type, $color in $card-background {
             &.#{$type} {
-                border: 3px solid map.get($color, "br-color");
+                border: 3px solid map.get($color, 'br-color');
             }
-
         }
     }
 
     @each $type, $color in $card-background {
         &.#{$type} {
-            background-color: map.get($color, "bg-color");
+            background-color: map.get($color, 'bg-color');
         }
     }
 }
@@ -105,7 +104,6 @@ $select-card-background: (
             font-size: 0.8rem;
             box-shadow: rgba(0, 0, 0, 0.10) 1px 7px 8px;
         }
-
     }
 
     .image-container {
@@ -286,7 +284,7 @@ $select-card-background: (
 
                     .attribute {
                         color: #525252;
-                        font-family: "Lato", sans-serif;
+                        font-family: 'Lato', sans-serif;
                         font-weight: 700;
                         font-size: .95rem;
                         text-transform: uppercase;
