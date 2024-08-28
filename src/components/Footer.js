@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import PokemonSong from '../assets/music/PokemonTheme.mp3';
 
 const Footer = () => {
+    const targetRef = useRef(null);
     const audio = useRef(new Audio(PokemonSong));
 
     const [playSong, setPlaySong] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const targetRef = useRef(null);
 
     const handleAudioClick = useCallback(() => {
         if (playSong) {
