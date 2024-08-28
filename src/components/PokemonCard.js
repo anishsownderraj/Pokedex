@@ -133,7 +133,7 @@ const PokemonCard = ({
                                         )}`}</span>
                                     </div>
                                     <div className='types-container'>
-                                        {pokemonCard.types.map((type) => (
+                                        {pokemonCard.types.map((type, idx) => (
                                             <div
                                                 className={`types`}
                                                 key={`select-card-${idx}`}
