@@ -26,7 +26,6 @@ const Footer = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                console.log(entry.isIntersecting);
                 setIsVisible(entry.isIntersecting);
             },
             {
