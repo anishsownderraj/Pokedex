@@ -52,6 +52,7 @@ const PokemonCard = ({
             }
         });
     }, [url]);
+
     return (
         <>
             {loading ? (
