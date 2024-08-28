@@ -58,7 +58,7 @@ const PokemonList = () => {
                             variants={prevPageURL ? buttonHover : ''}
                             disabled={!prevPageURL}
                         >
-                            <i class='material-symbols-outlined'>
+                            <i className='material-symbols-outlined'>
                                 arrow_back
                             </i>
                         </motion.div>
@@ -69,7 +69,7 @@ const PokemonList = () => {
                             variants={nextPageURL ? buttonHover : ''}
                             disabled={!nextPageURL}
                         >
-                            <i class='material-symbols-outlined'>
+                            <i className='material-symbols-outlined'>
                                 arrow_forward
                             </i>
                         </motion.div>
