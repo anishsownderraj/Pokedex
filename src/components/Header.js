@@ -1,3 +1,4 @@
+// dependencies
 import React from 'react';
 // images
 import PokedexImage from '../assets/Pokedex.png';
