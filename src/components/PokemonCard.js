@@ -12,7 +12,6 @@ import axios from 'axios';
 
 const cardHover = {
     hover: {
-        color: 'blue',
         y: -20,
         transition: {
             duration: 0.8,
