@@ -40,6 +40,7 @@
         ]
     },
     "devDependencies": {
+        "@babel/plugin-transform-private-property-in-object": "^7.24.7",
         "sass": "^1.77.8"
     }
 }
