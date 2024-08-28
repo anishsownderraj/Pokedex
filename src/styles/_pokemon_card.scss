@@ -54,7 +54,7 @@ $select-card-background: (
     border: 3px solid transparent;
 
     &:hover {
-        @each $type, $color in $type-background {
+        @each $type, $color in $card-background {
             &.#{$type} {
                 border: 3px solid map.get($color, "br-color");
             }
@@ -62,7 +62,7 @@ $select-card-background: (
         }
     }
 
-    @each $type, $color in $type-background {
+    @each $type, $color in $card-background {
         &.#{$type} {
             background-color: map.get($color, "bg-color");
         }
@@ -339,6 +339,10 @@ $select-card-background: (
             }
         }
     }
+
+    @each $type, $color in $select-card-background {
+        &.#{$type} {
+            background: $color;
         }
     }
 }
