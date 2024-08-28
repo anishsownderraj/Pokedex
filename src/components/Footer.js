@@ -22,7 +22,6 @@ const Footer = () => {
         setPlaySong(false);
     });
 
-
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
