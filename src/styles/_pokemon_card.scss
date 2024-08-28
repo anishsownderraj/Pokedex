@@ -66,19 +66,19 @@ $select-card-background: (
         &.#{$type} {
             background-color: map.get($color, "bg-color");
         }
-
     }
+}
 
-    .pokemon-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 80%;
-        padding: 10px 10px;
-        margin: auto;
-        gap: 25px;
-    }
+.pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    min-width: 220px;
+    padding: 10px 7px;
+    margin: auto;
+    gap: 25px;
 
     .header-container {
         display: flex;
