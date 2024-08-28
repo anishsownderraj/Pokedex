@@ -151,11 +151,195 @@ $select-card-background: (
                     border-radius: 25px;
                     color: white;
 
-                    img {
-                        width: 13px;
+
+    &.select {
+        left: calc(50% - 190px);
+        top: calc(50% - 225px);
+        position: fixed;
+        display: flex;
+        justify-content: start;
+        min-width: 380px;
+        min-height: 550px;
+        height: 250px;
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.23) 1px 7px 8px;
+        border: 3px solid transparent;
+        background-color: lightgrey;
+        z-index: 900;
+        box-shadow: 2px 0 12px 4px hsla(0, 0%, 100%, .5);
+        gap: 10px;
+
+        @each $type, $color in $card-background {
+            &.#{$type} {
+                background-color: map.get($color, 'bg-color');
+            }
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            i {
+                color: white;
+                font-size: 40px;
+            }
+
+            img {
+                width: 35px;
+                color: white;
+            }
+        }
+
+        .title-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            line-height: 70.28px;
+
+            .name {
+                text-align: center;
+                font-family: Lato, sans-serif;
+                vertical-align: middle;
+                color: white;
+                font-size: 1.8rem;
+                font-weight: 900;
+                text-transform: capitalize;
+            }
+
+            .number {
+                color: white;
+                font-size: 1.3rem;
+                font-weight: 550;
+
+            }
+        }
+
+        .types-container {
+            justify-content: start;
+            align-items: start;
+            gap: 10px;
+
+            .types {
+                color: white;
+                background-color: rgba(255, 255, 255, .25);
+                border-radius: 25px;
+                padding: 10px 15px;
+
+                img {
+                    width: 13px;
+                }
+            }
+        }
+
+        .image-container {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+
+            img {
+                width: 185px;
+            }
+        }
+
+        .pokemon-section-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 100%;
+            width: 380px;
+            background-color: white;
+            border-radius: 21px;
+            margin: -26px -100px -12.5px -100px;
+            padding: 10px 15px;
+
+            .title {
+                font-family: 'Times New Roman', Times, serif;
+                color: #343a40;
+                font-weight: 250;
+                font-size: 18px;
+            }
+
+            .stats-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-transform: capitalize;
+                width: 100%;
+                gap: 7px;
+
+                .stat-section {
+                    display: flex;
+                    width: 100%;
+                    gap: 10px;
+                }
+
+                .content-section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 58%;
+                    gap: 10px;
+
+                    .attribute {
+                        color: #525252;
+                        font-family: "Lato", sans-serif;
+                        font-weight: 700;
+                        font-size: .95rem;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .bar-section-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+
+                    .bar-section {
+                        position: relative;
+                        display: flex;
+                        width: 80%;
+                        background: lightgrey;
+                        border-radius: 100px;
+                        height: 7px;
+
+                        @each $type, $color in $card-background {
+                            .progress-animation-#{$type} {
+                                left: 0;
+                                top: 0.5px;
+                                position: absolute;
+                                overflow: hidden;
+                                height: 95%;
+                                width: 100%;
+                                border-radius: 100px;
+                                transform-origin: left;
+                                color: red;
+                                animation: #{$type}-select .9s ease-out forwards;
+
+                                @keyframes #{$type}-select {
+                                    0% {
+                                        transform: scaleX(0.1);
+                                        background-color: #001F3F;
+                                    }
+
+                                    100% {
+                                        transform: scaleX(1.0);
+                                        background-color: map.get($color, 'br-color');
+
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
+        }
+    }
         }
     }
 }
