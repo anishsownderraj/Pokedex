@@ -28,8 +28,8 @@ const PokemonList = () => {
             setPokemons(res.data.results);
             setNextPageURL(res.data.next);
             setPrevPageURL(res.data.previous);
+            setLoading(false);
         });
-        setLoading(false);
     }, [currentPageURL]);
 
     return (
