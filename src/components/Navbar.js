@@ -26,7 +26,6 @@ const Navbar = () => {
                             />
                         </Link>
                     </div>
-
                     <div className='social-links'>
                         <a
                             href='https://www.instagram.com/_anishs_'
@@ -67,7 +66,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </motion.nav>
-        </header >
+        </header>
     );
 };
 
