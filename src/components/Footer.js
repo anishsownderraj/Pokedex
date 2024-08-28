@@ -1,6 +1,6 @@
 // dependencies
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-// assets
+// music
 import PokemonSong from '../assets/music/PokemonTheme.mp3';
 
 const Footer = () => {
