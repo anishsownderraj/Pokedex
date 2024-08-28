@@ -35,12 +35,23 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        font-size: 30px;
         box-shadow: rgba(0, 0, 0, 0.23) 1px 7px 8px;
 
-        span {
-            font-size: 40px;
+        i {
             color: red;
+            font-size: 40px;
+            cursor: pointer;
+
+        }
+
+        &.disabled {
+            i {
+                color: grey;
+                cursor: default;
+            }
+        }
+    }
+}
         }
     }
 }
