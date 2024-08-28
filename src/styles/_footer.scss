@@ -92,24 +92,26 @@
     }
 
     .sound-section {
-        &.visble {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 200px;
+        bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+
+        &.visible {
             visibility: hidden;
             opacity: 0;
             transition: visibility 1s, opacity 0.5s linear;
         }
 
         i {
-            position: fixed;
-            right: 200px;
-            bottom: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: fit-content;
             background-color: white;
             border-radius: 50%;
             box-shadow: rgba(0, 0, 0, 0.23) 1px 7px 8px;
-            z-index: 5;
             padding: 5px;
             color: red;
             font-size: 40px;
