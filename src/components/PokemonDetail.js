@@ -9,8 +9,11 @@ const PokemonDetail = ({ stats, pokemonType }) => {
                 Base Stats
             </div>
             <div className='stats-container'>
-                {stats.map((type) => (
-                    <span className='stat-section'>
+                {stats.map((type, idx) => (
+                    <span
+                        className='stat-section'
+                        key={`stats-${idx}`}
+                    >
                         <div className='content-section'>
                             <span className='attribute'>
                                 {type.stat.name}
