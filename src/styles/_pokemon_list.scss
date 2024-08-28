@@ -52,6 +52,23 @@
         }
     }
 }
+
+.pokemon-loading-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 1s infinite linear;
+    font-size: 200px;
+
+    @keyframes spin {
+        from {
+            transform: scale(1) rotateY(0deg);
+        }
+
+        to {
+            transform: scale(1) rotateY(359deg);
         }
     }
 }
