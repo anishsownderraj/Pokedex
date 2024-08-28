@@ -89,7 +89,7 @@ const PokemonCard = ({
                             <div className='types-container'>
                                 {pokemonCard.types.map((type) => (
                                     <div className={`types-${type.type.name}`}>
-                                        <img src={defineIcon(pokemonCard.types[0].type.name)} />
+                                        <img src={defineIcon(type.type.name)} />
                                         &nbsp;{type.type.name}
                                     </div>
                                 ))}
@@ -132,7 +132,7 @@ const PokemonCard = ({
                                     <div className='types-container'>
                                         {pokemonCard.types.map((type) => (
                                             <div className={`types`}>
-                                                <img src={defineIcon(pokemonCard.types[0].type.name)} />
+                                                <img src={defineIcon(type.type.name)} />
                                                 &nbsp;{type.type.name}
                                             </div>
                                         ))}
