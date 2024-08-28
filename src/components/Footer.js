@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
             <div
                 onClick={() => handleAudioClick()}
-                className={`sound-section ${isVisible ? 'visble' : ''}`}
+                className={`sound-section ${isVisible ? 'visible' : ''}`}
             >
                 {!playSong ? (
                     <i className='material-symbols-outlined'>
