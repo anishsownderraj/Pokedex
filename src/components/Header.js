@@ -5,7 +5,10 @@ import PokedexImage from '../assets/Pokedex.png';
 const Header = () => {
     return (
         <div className='header'>
-            <img src={PokedexImage} />
+            <img
+                src={PokedexImage}
+                alt='Pokedex Title'
+            />
         </div>
     );
 };

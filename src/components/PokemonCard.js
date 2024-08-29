@@ -84,6 +84,7 @@ const PokemonCard = ({
                                         pokemonCard.id,
                                         3
                                     )}.png`}
+                                    alt='Pokemon Animal'
                                 />
                             </div>
                             <div className='types-container'>
@@ -92,7 +93,10 @@ const PokemonCard = ({
                                         className={`types-${type.type.name}`}
                                         key={`card-${idx}`}
                                     >
-                                        <img src={defineIcon(type.type.name)} />
+                                        <img
+                                            src={defineIcon(type.type.name)}
+                                            alt='Pokemon Type Icon'
+                                        />
                                         &nbsp;{type.type.name}
                                     </div>
                                 ))}
@@ -123,7 +127,10 @@ const PokemonCard = ({
                                         >
                                             keyboard_double_arrow_left
                                         </i>
-                                        <img src={pokeBall} />
+                                        <img
+                                            src={pokeBall}
+                                            alt='Pokemon Ball'
+                                        />
                                     </div>
                                     <div className='title-container'>
                                         <span className='name'>{pokemonCard.name}</span>
@@ -138,7 +145,10 @@ const PokemonCard = ({
                                                 className={`types`}
                                                 key={`select-card-${idx}`}
                                             >
-                                                <img src={defineIcon(type.type.name)} />
+                                                <img
+                                                    src={defineIcon(type.type.name)}
+                                                    alt='Pokemon Type Icon'
+                                                />
                                                 &nbsp;{type.type.name}
                                             </div>
                                         ))}
@@ -150,6 +160,7 @@ const PokemonCard = ({
                                                 pokemonCard.id,
                                                 3
                                             )}.png`}
+                                            alt='Pokemon Animal'
                                         />
                                     </div>
                                     <PokemonDetail
