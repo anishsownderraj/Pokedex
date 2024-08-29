@@ -53,11 +53,12 @@ const PokemonCard = ({
     }, [url]);
 
     useEffect(() => {
+        document.body.style.overflowX = 'hidden';
         if (cardSelected) {
             document.body.style.overflow = 'hidden';
         }
         else {
-            document.body.style.overflow = 'scroll';
+            document.body.style.overflowY = 'scroll';
         }
     }, [cardSelected]);
 
