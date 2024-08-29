@@ -37,6 +37,11 @@ const PokemonCard = ({
         return s;
     }
 
+    const selectCard = () => {
+        setSelectedId(pokemonCard.id);
+        setCardSelected(true);
+    };
+
     const exitCard = () => {
         setSelectedId('');
         setCardSelected(false);
@@ -70,14 +75,13 @@ const PokemonCard = ({
                 <>
                     <motion.div
                         className={`pokemon-card-container ${pokemonCard?.types[0].type.name}`}
-                        onClick={() => setCardSelected(true)}
+                        onClick={() => selectCard()}
                         layoutId={pokemonCard.id}
                         whileHover='hover'
                         variants={cardHover}
                     >
                         <motion.div
                             className='pokemon-card'
-                            onClick={() => setSelectedId(pokemonCard.id)}
                         >
                             <div className='header-container'>
                                 <span className='name'>{pokemonCard.name}</span>
