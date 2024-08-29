@@ -52,6 +52,15 @@ const PokemonCard = ({
         });
     }, [url]);
 
+    useEffect(() => {
+        if (cardSelected) {
+            document.body.style.overflow = 'hidden';
+        }
+        else {
+            document.body.style.overflow = 'scroll';
+        }
+    }, [cardSelected]);
+
     return (
         <>
             {loading ? (
