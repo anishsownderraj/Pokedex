@@ -1,5 +1,5 @@
 // dependencies
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 // components
 import PokemonCard from './PokemonCard';
