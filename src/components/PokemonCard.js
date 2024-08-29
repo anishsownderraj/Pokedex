@@ -28,7 +28,7 @@ const PokemonCard = ({
     setSelectedId
 }) => {
     const [pokemonCard, setPokemonCard] = useState([]);
-    const [cardSelected, setCardSelected] = useState(false);
+    const [cardSelected, setSelectedCard] = useState(false);
     const [loading, setLoading] = useState(true);
 
     function padLeadingZeros(num, size) {
@@ -39,12 +39,12 @@ const PokemonCard = ({
 
     const selectCard = () => {
         setSelectedId(pokemonCard.id);
-        setCardSelected(true);
+        setSelectedCard(true);
     };
 
     const exitCard = () => {
         setSelectedId('');
-        setCardSelected(false);
+        setSelectedCard(false);
     };
 
     useEffect(() => {
