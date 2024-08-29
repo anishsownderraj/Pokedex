@@ -59,7 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: spin 1s infinite linear;
+    animation: spin .4s infinite linear;
     font-size: 200px;
 
     @keyframes spin {
